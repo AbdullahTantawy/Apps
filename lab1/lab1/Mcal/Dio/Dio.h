@@ -73,8 +73,8 @@
 
 void M_Dio_PinMode(u8 Local_u8_num , u8 Local_u8_Mode);
 void M_Dio_PinWrite(u8 Local_u8_num , u8 Local_u8_Mode);
-void M_Dio_pinTog(u8);
-
+void M_Dio_pinTog(u8 Local_u8_num);
+u8   M_Dio_PinGet(u8 Local_u8_num);
 
 
 #endif /* DIO_H_ */

@@ -104,6 +104,7 @@
       <Value>../Mcal/Dio</Value>
       <Value>../Hal</Value>
       <Value>../Hal/Led</Value>
+      <Value>../Hal/Pushbutton</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -144,6 +145,15 @@
     <Compile Include="Hal\Led\LedCfg.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Hal\Pushbutton\Pushbutton.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hal\Pushbutton\Pushbutton.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hal\Pushbutton\PushbuttonCfg.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Mcal\Dio\Dio.c">
       <SubType>compile</SubType>
     </Compile>
@@ -161,6 +171,7 @@
     <Folder Include="App" />
     <Folder Include="Hal" />
     <Folder Include="Hal\Led" />
+    <Folder Include="Hal\Pushbutton" />
     <Folder Include="Mcal" />
     <Folder Include="Mcal\Dio\" />
   </ItemGroup>

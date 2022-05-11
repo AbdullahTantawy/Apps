@@ -93,6 +93,7 @@ void M_Dio_PinWrite(u8 Local_u8_num , u8 Local_u8_Mode)
 	
 }
 
+//----------------------------------------------------------------
 
 void M_Dio_pinTog(u8 Local_u8_num)
 {
@@ -109,4 +110,26 @@ void M_Dio_pinTog(u8 Local_u8_num)
 		case PORT_D:	Togbit(PORTD,Local_u8_Pin);	 break;
 		default:								 break;
 	}// switch port
+}
+
+//----------------------------------------------------------------------------
+
+u8   M_Dio_PinGet(u8 Local_u8_num)
+{
+	// variable to select the pin number
+	u8 Local_u8_Pin = Local_u8_num %10;
+	// variable to select the port
+	u8 local_u8_Port = Local_u8_num /10;
+	
+	u8 Local_u8_Reading = 0;
+	switch(local_u8_Port) // select the port
+	{
+		case PORT_A:Local_u8_Reading=Getbit(PINA,Local_u8_Pin);	 break;
+		case PORT_B:Local_u8_Reading=Getbit(PINB,Local_u8_Pin);	 break;
+		case PORT_C:Local_u8_Reading=Getbit(PINC,Local_u8_Pin);	 break;
+		case PORT_D:Local_u8_Reading=Getbit(PIND,Local_u8_Pin);	 break;
+		default:													 break;
+	}// switch port
+	
+	return Local_u8_Reading;
 }
